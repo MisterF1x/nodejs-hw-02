@@ -11,10 +11,10 @@ const transport = nodemailer.createTransport({
   },
 });
 
-const sendMail = async (data) => {
+const sendEmail = async (data) => {
   const email = { ...data, from: "test@gmail.com" };
   await transport.sendMail(email);
   return true;
 };
 
-module.exports = sendMail;
+module.exports = sendEmail;
